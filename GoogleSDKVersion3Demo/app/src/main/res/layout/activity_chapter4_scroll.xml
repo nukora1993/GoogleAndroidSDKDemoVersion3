@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chapter4.Chapter4ScrollActivity">
+
+    <com.example.googlesdkversion3demo.chapter4.MyViewGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:view_screen="1">
+        <include android:id="@+id/left" layout="@layout/main"/>
+        <include android:id="@+id/center" layout="@layout/main"/>
+        <include android:id="@+id/right" layout="@layout/main"/>
+    </com.example.googlesdkversion3demo.chapter4.MyViewGroup>
+
+</LinearLayout>

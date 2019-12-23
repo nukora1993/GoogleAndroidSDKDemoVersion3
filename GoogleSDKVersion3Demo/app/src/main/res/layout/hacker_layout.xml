@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.example.googlesdkversion3demo.chapter5.HackerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hack_image_view_1"
+        android:src="@drawable/ic_launcher_foreground"/>
+
+<!--    增加的filterTouchesWhenObscured表示当该控件失去焦点时，不能点击-->
+<!--    但hack的前提是能拿到原来activity的所有控件的位置并完全一致的显示，这几乎不可能，所以不知道这个hack有啥用-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hack_image_view_2"
+        android:src="@drawable/ic_launcher_foreground"
+        android:filterTouchesWhenObscured="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hack_button"/>
+
+
+</com.example.googlesdkversion3demo.chapter5.HackerView>

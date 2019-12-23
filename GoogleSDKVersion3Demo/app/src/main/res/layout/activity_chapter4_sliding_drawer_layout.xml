@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chapter4.Chapter4SlidingDrawerLayout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:textSize="16sp"/>
+
+    <SlidingDrawer
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:handle="@+id/layout"
+        android:content="@id/my_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="35px"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_foreground">
+
+        </ImageView>
+        </LinearLayout>
+
+        <GridView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_content"
+            android:numColumns="2"
+            android:background="@android:color/black"
+            android:gravity="center">
+
+        </GridView>
+
+
+    </SlidingDrawer>
+
+</RelativeLayout>

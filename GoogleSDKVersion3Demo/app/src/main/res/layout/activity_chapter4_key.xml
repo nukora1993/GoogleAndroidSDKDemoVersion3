@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chapter4.Chapter4KeyActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chapter4_text_view_1"
+        android:text="test"/>
+
+
+    <EditText
+        android:id="@+id/chapter4_edit_text_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="type something"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></RadioButton>
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></RadioButton>
+    </RadioGroup>
+
+</LinearLayout>

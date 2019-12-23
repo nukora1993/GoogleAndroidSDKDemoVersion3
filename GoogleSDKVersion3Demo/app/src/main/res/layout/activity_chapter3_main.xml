@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".chapter3.Chapter3MainActivity"
+    android:orientation="vertical">
+<!--    autoLink属性，可以自动给text中的网址加超链接，并且可以直接访问-->
+<!--    style属性可以设置自定义的style，style作为常量应放在values文件夹-->
+    <TextView
+        style="@style/MyStyle"
+        android:id="@+id/text_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:background="@drawable/white"
+        android:text="测试网址 http://www.baidu.com"/>
+
+</LinearLayout>

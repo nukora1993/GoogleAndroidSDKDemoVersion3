@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.googlesdkversion3demo">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- 为了在免打扰模式下切换音量 -->
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".chapter7.Chapter7VoiceRecogActivity"></activity>
+        <activity android:name=".chapter7.Chapter7SurfaceViewActivity" />
+        <activity android:name=".chapter7.Chapter7ExifActivity" />
+        <activity android:name=".chapter7.Chapter7CustomButtonActivity" />
+        <activity android:name=".DebugActivity" />
+        <activity android:name=".chapter7.Chapter7GameActivity" />
+        <activity android:name=".chapter7.Chapter7MultiTouchActivity" />
+        <activity android:name=".chapter7.Chapter7GestureDetectorActivity" />
+        <activity android:name=".chapter7.Chapter7TextToSpeechActivity" />
+        <activity android:name=".chapter7.Chapter7CameraActivity" />
+        <activity android:name=".chapter7.Chapter7RecorderActivity" />
+        <activity android:name=".chapter7.Chapter7AudioVolumeActivity" />
+        <activity android:name=".chapter7.Chapter7GetPictureActivity" />
+        <activity android:name=".chapter7.Chapter7MoveImageActivity" />
+        <activity android:name=".chapter7.Chapter7GraphicsActivity" />
+        <activity android:name=".chapter7.Chapter7BitmapDrawableActivity" />
+        <activity android:name=".chapter6.Chapter6GesturePredictionActivity" />
+
+        <service android:name=".chapter7.Chapter7WallPaperService"
+            android:permission="android.permission.BIND_WALLPAPER"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/livewallpaper"/>
+        </service>
+
+        <service
+            android:name=".chapter6.Chapter6BatteryWidget$UpdateService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".chapter6.Chapter6BatteryWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/chapter6_batter_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".chapter6.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".chapter6.Chapter6BootCompleteActivity" />
+        <activity android:name=".chapter6.Chapter6SensorActivity" />
+        <activity android:name=".chapter6.Chapter6AudioManagerActivity" />
+        <activity android:name=".chapter6.Chapter6PhoneCallActivity" />
+        <activity android:name=".chapter6.Chapter6SendSmsActivity" />
+        <activity android:name=".chapter6.Chapter6BatteryActivity" />
+
+        <receiver
+            android:name=".chapter6.Chapter6SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".chapter6.Chapter6SmsServiceActivity" />
+        <activity android:name=".chapter5.Chapter5ClipBoardActivity" />
+        <activity android:name=".chapter5.Chapter5ToastUIActivity" />
+        <activity android:name=".chapter5.Chapter5PackageManagerActivity" />
+        <activity android:name=".chapter5.MyNotificationActivity" />
+        <activity android:name=".chapter5.FullScreenIntentActivity" />
+        <activity android:name=".chapter5.Chapter5ProgressNotificationActivity" />
+        <activity android:name=".chapter5.Chapter5ShellActivity" />
+
+        <receiver
+            android:name=".chapter5.MyDeviceAdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".chapter5.Chapter5SettingActivity" />
+        <activity android:name=".chapter5.Chapter5DeviceManagerActivity" />
+        <activity android:name=".chapter5.Chapter5GestureActivity" />
+        <activity
+            android:name=".chapter5.Chapter5OrientationActivity"
+            android:configChanges="orientation|keyboard|layoutDirection|screenLayout|screenSize" />
+        <activity android:name=".chapter5.Chapter5TasksActivity" />
+        <activity android:name=".chapter5.Chapter5TelephonyActivity" />
+        <activity android:name=".chapter5.Chapter5WifiConnectActivity" />
+        <activity android:name=".chapter5.Chapter5WifiActivity" />
+        <activity android:name=".chapter5.Chapter5FileExplorer" />
+        <activity android:name=".chapter5.Chapter5WallPaperActivity" />
+        <activity android:name=".chapter5.Chapter5GetContactActivity" />
+        <activity android:name=".chapter5.Chapter5AutoCompleteContactActivity" />
+        <activity android:name=".chapter5.Chapter5VibratorActivity" />
+        <activity android:name=".chapter5.Chapter5SmsActivity" />
+        <activity android:name=".chapter5.Chapter5LinkifyActivity" />
+        <activity android:name=".chapter4.Chapter4ScrollActivity" />
+        <activity android:name=".chapter4.Chapter4InputDeviceActivity" />
+
+        <receiver android:name=".chapter4.Chapter4UIAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/chapter4_uiapp_widget_provider_info" />
+        </receiver>
+
+        <activity android:name=".chapter4.Chapter4SearchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".chapter4.UpdateService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".chapter4.MyAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/my_app_widget_provider_info" />
+        </receiver>
+
+        <activity android:name=".chapter4.Chapter4AppWidgetProviderActivity" />
+        <activity android:name=".chapter4.Chapter4SlidingDrawerLayout" />
+        <activity android:name=".chapter4.Chapter4ImageRotateActivity" />
+        <activity android:name=".chapter4.Chapter4ImageScaleActivity" />
+        <activity android:name=".chapter4.Chapter4DecodeFileActivity" />
+        <activity android:name=".chapter4.Chapter4FileExplorerListActivity" />
+        <activity
+            android:name=".chapter4.Chapter4ListActivity"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name=".chapter4.Chapter4ListViewActivity" />
+        <activity android:name=".chapter4.Chapter4GridViewActivity" />
+        <activity android:name=".chapter4.Chapter4ProgressBarActivity" />
+        <activity android:name=".chapter4.Chapter4DatePickerActivity" />
+        <activity android:name=".chapter4.Chapter4ClockActivity" />
+        <activity android:name=".chapter4.Chapter4SpinnerActivity" />
+        <activity android:name=".chapter4.Chapter4KeyActivity" />
+        <activity android:name=".chapter3.Chapter3ViewFlipperActivity" />
+        <activity android:name=".chapter3.Chapter3GalleryActivity" />
+        <activity android:name=".chapter3.Chapter3MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
