@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 //            requestPermissions(new String[]{Manifest.permission.READ_PHONE_STATE},0);
 //        }
-        Intent intent=new Intent(this, Chapter7VoiceRecogActivity.class);
+        Intent intent=new Intent(this, Chapter7GameActivity.class);
         startActivity(intent);
     }
 }

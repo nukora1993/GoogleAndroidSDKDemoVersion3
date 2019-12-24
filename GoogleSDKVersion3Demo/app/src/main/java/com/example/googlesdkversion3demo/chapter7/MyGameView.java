@@ -57,7 +57,7 @@ public class MyGameView extends View {
 
     @Override
     public void draw(Canvas canvas) {
-        Log.d(TAG,"draw");
+//        Log.d(TAG,"draw");
 
         //蓝色画笔，绘制触摸点
         Paint paint=new Paint();
@@ -132,7 +132,6 @@ public class MyGameView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
-
         touchX=event.getX();
         touchY=event.getY();
 
@@ -179,6 +178,6 @@ public class MyGameView extends View {
             }
         }
         invalidate();
-        return super.onTouchEvent(event);
+        return true;
     }
 }
